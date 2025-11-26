@@ -239,16 +239,14 @@ graph TD
         A[fa:fa-robot polish_consumer_law_agent]
 
         %% Define the Tools
-        subgraph polish_expert_tool
-            direction TB
-            B[fa:fa-wrench AgentTool] --> C[fa:fa-robot polish_culinary_agent]
-        end
-
-        D[fa:fa-wrench german_food_tool]
+        B[fa:fa-wrench AgentTool polish_complaints_law_expert_tool] --> C[fa:fa-robot polish_complaints_law_expert_agent]
+        D[fa:fa-wrench AgentTool polish_return_policies_expert_tool] --> E[fa:fa-robot polish_return_policies_expert_agent]
+        F[fa:fa-wrench Python function no_return_complain_possible_response]
 
         %% Define the relationships
         A --> B
         A --> D
+        A --> F
     end
 ```
 
